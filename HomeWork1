@@ -1,0 +1,27 @@
+using System;
+
+namespace HomeWork
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Name & Surename: ");
+            string FIO = Console.ReadLine();
+            Console.WriteLine("Adress: ");
+            string strt = Console.ReadLine();
+            Console.WriteLine("Hight: ");
+            string hight = Console.ReadLine();
+            hight = hight.Replace("." , ",");
+            Console.WriteLine("weight: ");
+            string weight = Console.ReadLine();
+            Console.WriteLine("age: ");
+            string age = Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine(FIO , strt , hight , weight , age);
+
+        }
+    }
+}
