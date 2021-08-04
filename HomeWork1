@@ -20,7 +20,7 @@ namespace HomeWork
             string age = Console.ReadLine();
             Console.Clear();
 
-            Console.WriteLine(FIO , strt , hight , weight , age);
+            Console.WriteLine("Name & Surename:"+FIO +" Adress:"+strt + " Hight:"+ hight+" weight:"+ weight  + " age:"+age);
 
         }
     }
