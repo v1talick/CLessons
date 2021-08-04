@@ -1,0 +1,54 @@
+using System;
+
+namespace LootBox
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Your Age:");
+            int age;
+            age = Convert.ToInt32(Console.ReadLine());
+            if (age >= 18) 
+            {
+                Console.Clear();
+                int bid;
+                Console.WriteLine("Your bid:");
+                bid = Convert.ToInt32(Console.ReadLine());
+                if (bid < 5 | bid > 100 ) 
+                { 
+                    Console.WriteLine("Amount of your bid must be between 5$ and 100$");
+                }
+                else 
+                {
+                    Random x = new Random();
+                    int rndX = x.Next(1 , 10);
+                    Random y = new Random();
+                    int rndY = y.Next(1, 10);
+                    Random z = new Random();
+                    int rndZ = z.Next(1, 10);
+
+                    Console.WriteLine(rndX); Console.WriteLine(rndY); Console.WriteLine(rndZ);
+                    if (rndX == 7 | rndY == 7 | rndZ == 7) { Console.WriteLine("Your win is" +bid*1,6+"$"); }
+                    else if (rndX == 9 | rndY == 9 | rndZ == 9) { Console.WriteLine("Your win is" +bid* 1,35+"$"); }
+                    else if (rndX == rndY) { Console.WriteLine("Your win is" + bid * rndY * 1,25+"$"); }
+                    else if (rndY == rndZ && rndY ==rndX) { Console.WriteLine("Your win is "+ bid * rndZ * 1, 5+ "$"); }
+
+                    else { Console.WriteLine("You've lost"+(bid)+"$,try again"); }
+
+
+
+
+                }
+            }
+            else 
+            {
+                Console.Clear();
+                Console.WriteLine("You are not allowed to play ");
+            }
+                
+
+        }
+    }
+}
